@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML e CSS</title>
+    <link rel="stylesheet" href="{% static '/styles/style.css' %}">
+</head>
+
+<body>
+    {% include 'base/_menu.html' %}
+    
+    <main class="apresentacao">
+        <section class="apresentacao__conteudo">
+            <h1 class="apresentacao__conteudo__titulo">Elevando o conhecimento WEB <strong 
+            class="titulo-destaque">com um Front-end de qualidade!
+            </strong></h1>
+            <p class="apresentacao__conteudo__texto">Olá! Sou o Clayton Corrêa, desenvolvedor
+            da Laatus. Estou desenvolvendo essa página para me ajudar nos estudos utilizando Django, HTML e CSS em breve JavaScript e APIs </p>
+            <div class="apresentacao__links">
+                <h2 class="apresentacao__links__subtitulo">Minhas redes</h2>
+                <a class="apresentacao__links__link" href="https://github.com/claytonlcorrea">
+                    <img src="{% static 'ico/github.png' %}">
+                    Github
+                </a>
+                <a class="apresentacao__links__link" href="https://linkedin.com/in/claytonlcorrea">
+                    <img src="{% static 'ico/linkedin.png' %}">
+                    linkedin
+                </a>
+                <a class="apresentacao__links__link" href="https://www.instagram.com/claytonlcorrea/">
+                    <img src="{% static 'ico/instagram.png' %}">
+                    Instagram
+                </a>
+            </div>
+        </section>
+        <img class='foto_index' src="{% static 'pic/Imagem.png' %}" alt="Foto da Clayton home">
+    </main>
+    {% include 'base/_footer.html' %}
+</body>
+
+</html>
